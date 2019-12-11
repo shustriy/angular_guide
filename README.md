@@ -18,6 +18,9 @@ After installation
 
 ## INFO
 
+# Create new component
+ - ng generate component NameEditor
+
 #Link to example
 https://mherman.org/blog/dockerizing-an-angular-app/
 
