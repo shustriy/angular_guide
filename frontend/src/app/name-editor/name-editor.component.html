@@ -1,1 +1,9 @@
-<p>name-editor works!</p>
+<label>
+  Name: <input type="text" [formControl]="name" required />
+</label>
+<p> Value: {{ name.value }} </p>
+<p> Status: {{ name.valid }} </p>
+<p>
+  <button (click)="updateName()">Update Name</button>
+</p>
+
