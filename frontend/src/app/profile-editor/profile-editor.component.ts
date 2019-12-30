@@ -16,10 +16,10 @@ export class ProfileEditorComponent implements OnInit {
 
   profileForm = this.fb.group({
     firstName: ['', Validators.required],
-    lastName: ['', [Validators.required]],
+    lastName: [{value: 'Smith', disabled: true}, [Validators.required]],
     address: this.fb.group({
       street:  [''],
-      city:  [''],
+      city:  [{value: 'Los Angeles', disabled: true}],
       state:  [''],
       zip:  this.fb.control('1235')
     }),
@@ -37,6 +37,7 @@ export class ProfileEditorComponent implements OnInit {
   public onSubmit(event) {
     console.warn(this.profileForm.value);
     console.warn('getRawValue', this.profileForm.getRawValue());
+    console.warn('aliases getRawValue', this.aliases.getRawValue());
   }
 
   public updateProfile() {
