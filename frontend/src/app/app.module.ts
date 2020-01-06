@@ -7,13 +7,19 @@ import { AppComponent } from './app.component';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { ProfileEditorComponent } from './profile-editor/profile-editor.component';
 import { HeroFormComponent } from './hero-form/hero-form.component';
+import { HeroFormTemplateComponent } from './hero-form-template/hero-form-template.component';
+import { HeroFormReactiveComponent } from './hero-form-reactive/hero-form-reactive.component';
+import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NameEditorComponent,
     ProfileEditorComponent,
-    HeroFormComponent
+    HeroFormComponent,
+    HeroFormTemplateComponent,
+    HeroFormReactiveComponent,
+    ForbiddenValidatorDirective
   ],
   imports: [
     BrowserModule,
