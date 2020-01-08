@@ -8,7 +8,10 @@ import { Hero } from '../hero';
 })
 export class HeroFormTemplateComponent implements OnInit {
 
-  public hero: Hero = new Hero(18, 'Dr IQ', '', 'Chuck Overstreet');
+  public powers: string[] = ['Really Smart', 'Super Flexible',
+    'Super Hot', 'Weather Changer'];
+
+  public hero: Hero = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');
 
   constructor() { }
 
