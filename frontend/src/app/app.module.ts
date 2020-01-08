@@ -10,7 +10,8 @@ import { HeroFormComponent } from './hero-form/hero-form.component';
 import { HeroFormTemplateComponent } from './hero-form-template/hero-form-template.component';
 import { HeroFormReactiveComponent } from './hero-form-reactive/hero-form-reactive.component';
 import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
-import { IdentityRevealedValidatorDirective } from "./shared/identity-revealed.directive";
+import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.directive';
+import { DynamicalAddControlComponent } from './dynamical-add-control/dynamical-add-control.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { IdentityRevealedValidatorDirective } from "./shared/identity-revealed.d
     HeroFormTemplateComponent,
     HeroFormReactiveComponent,
     ForbiddenValidatorDirective,
-    IdentityRevealedValidatorDirective
+    IdentityRevealedValidatorDirective,
+    DynamicalAddControlComponent
   ],
   imports: [
     BrowserModule,
