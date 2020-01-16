@@ -12,6 +12,8 @@ import { HeroFormReactiveComponent } from './hero-form-reactive/hero-form-reacti
 import { ForbiddenValidatorDirective } from './shared/forbidden-name.directive';
 import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.directive';
 import { DynamicalAddControlComponent } from './dynamical-add-control/dynamical-add-control.component';
+import { DynamicalAddValidatorComponent } from './dynamical-add-validator/dynamical-add-validator.component';
+import { DisableControlComponent } from './disable-control/disable-control.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DynamicalAddControlComponent } from './dynamical-add-control/dynamical-
     HeroFormReactiveComponent,
     ForbiddenValidatorDirective,
     IdentityRevealedValidatorDirective,
-    DynamicalAddControlComponent
+    DynamicalAddControlComponent,
+    DynamicalAddValidatorComponent,
+    DisableControlComponent
   ],
   imports: [
     BrowserModule,
