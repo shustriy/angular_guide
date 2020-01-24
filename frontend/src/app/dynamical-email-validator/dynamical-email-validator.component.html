@@ -1,0 +1,21 @@
+<p>dynamical-email-validator works!</p>
+<form
+    [formGroup]="accountForm"
+    (ngSubmit)="onSubmit()">
+>
+    <div>
+        Make email mandatory
+        <input type="checkbox" formControlName="accountCheckedEmail" />
+    </div>
+
+    <div>
+        Email: <input formControlName="accountEmail">
+    </div>
+    <button [formAction]="submit">Save</button>
+</form>
+
+<h2>Debug</h2>
+<ul>
+    <li>Form valid: {{accountForm.valid}}</li>
+    <li>Validation Errors: <pre>{{accountEmail.errors | json}}</pre></li>
+</ul>

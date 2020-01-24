@@ -14,6 +14,7 @@ import { IdentityRevealedValidatorDirective } from './shared/identity-revealed.d
 import { DynamicalAddControlComponent } from './dynamical-add-control/dynamical-add-control.component';
 import { DynamicalAddValidatorComponent } from './dynamical-add-validator/dynamical-add-validator.component';
 import { DisableControlComponent } from './disable-control/disable-control.component';
+import { DynamicalEmailValidatorComponent } from './dynamical-email-validator/dynamical-email-validator.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DisableControlComponent } from './disable-control/disable-control.compo
     IdentityRevealedValidatorDirective,
     DynamicalAddControlComponent,
     DynamicalAddValidatorComponent,
-    DisableControlComponent
+    DisableControlComponent,
+    DynamicalEmailValidatorComponent
   ],
   imports: [
     BrowserModule,
