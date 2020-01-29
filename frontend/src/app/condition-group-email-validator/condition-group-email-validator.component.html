@@ -1,7 +1,7 @@
-<p>dynamical-email-validator works!</p>
+<p>Create custom conditional group validator</p>
 <form
-    [formGroup]="accountForm"
-    (ngSubmit)="onSubmit()">
+        [formGroup]="accountForm"
+        (ngSubmit)="onSubmit()">
     <div>
         Make email mandatory
         <input type="checkbox" formControlName="accountCheckedEmail" />
@@ -15,6 +15,4 @@
 
 <h2>Debug</h2>
 <ul>
-    <li>Form valid: {{accountForm.valid}}</li>
-    <li>Validation Errors: <pre>{{accountEmail.errors | json}}</pre></li>
 </ul>

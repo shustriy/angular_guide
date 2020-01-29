@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AbstractControl, AbstractControlOptions, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {AbstractControl, AbstractControlOptions, FormBuilder, FormControl, FormGroup, Validators, ValidatorFn} from '@angular/forms';
 
 @Component({
   selector: 'app-dynamical-email-validator',
@@ -9,6 +9,11 @@ import {AbstractControl, AbstractControlOptions, FormBuilder, FormControl, FormG
 export class DynamicalEmailValidatorComponent implements OnInit {
 
   private accountForm: FormGroup;
+  private accountEmailValidators: ValidatorFn[] = [
+    Validators.maxLength(250),
+    Validators.minLength(5),
+    Validators.pattern(/.+@.+\..+/)
+  ];
 
   constructor(private fb: FormBuilder) { }
 
@@ -16,15 +21,23 @@ export class DynamicalEmailValidatorComponent implements OnInit {
     return this.accountForm.get('accountEmail') as FormControl;
   }
 
+  public get accountCheckedEmail() {
+    return this.accountForm.get('accountCheckedEmail') as FormControl;
+  }
+
   ngOnInit() {
     this.accountForm = this.fb.group({
       accountCheckedEmail: [true],
-      accountEmail: ['', [
-        Validators.required,
-        Validators.maxLength(250),
-        Validators.minLength(5),
-        Validators.pattern(/.+@.+\..+/)
-      ]]
+      accountEmail: ['']
+    });
+
+    this.accountCheckedEmail.valueChanges.subscribe(value => {
+      if (value) {
+        this.accountEmail.setValidators(this.accountEmailValidators.concat([Validators.required]));
+      } else {
+        this.accountEmail.clearValidators();
+      }
+      this.accountEmail.updateValueAndValidity();
     });
   }
 
