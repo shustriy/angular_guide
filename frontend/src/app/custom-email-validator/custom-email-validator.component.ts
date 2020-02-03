@@ -3,8 +3,13 @@ import {
   FormBuilder,
   FormGroup,
   Validators,
-  AbstractControl
+  AbstractControl,
+  ValidatorFn
 } from "@angular/forms";
+
+export interface BooleanFn {
+  (): boolean;
+}
 
 function emailConditionallyRequiredValidator(formControl: AbstractControl) {
   if (!formControl.parent) {
@@ -15,6 +20,26 @@ function emailConditionallyRequiredValidator(formControl: AbstractControl) {
     return Validators.required(formControl);
   }
   return null;
+}
+
+function conditionalValidator(predicate: BooleanFn,
+                              validator: ValidatorFn,
+                              errorNamespace?: string): ValidatorFn {
+  return (formControl => {
+    if (!formControl.parent) {
+      return null;
+    }
+    let error = null;
+    if (predicate()) {
+      error = validator(formControl);
+    }
+    if (errorNamespace && error) {
+      const customError = {};
+      customError[errorNamespace] = error;
+      error = customError
+    }
+    return error;
+  })
 }
 
 @Component({
@@ -33,10 +58,10 @@ export class CustomEmailValidatorComponent implements OnInit {
         Validators.maxLength(250),
         Validators.minLength(5),
         Validators.pattern(/.+@.+\..+/),
-        emailConditionallyRequiredValidator
+        conditionalValidator(() => this.accountForm.get('accountCheckedEmail').value,
+          Validators.required, 'conditionalValidatorError')
       ]]
     });
-
 
     this.accountForm.get('accountCheckedEmail').valueChanges
       .subscribe(() => this.accountForm.get('accountEmail').updateValueAndValidity());
@@ -47,5 +72,6 @@ export class CustomEmailValidatorComponent implements OnInit {
 
   onSubmit() {
     console.log(this.accountForm);
+    console.log(this.accountForm.get('accountEmail'));
   }
 }
