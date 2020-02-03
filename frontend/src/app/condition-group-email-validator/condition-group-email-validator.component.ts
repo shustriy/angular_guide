@@ -70,11 +70,8 @@ export class ConditionGroupEmailValidatorComponent implements OnInit {
     });
   }
 
-
-
   ngOnInit() {
   }
-
 
   onSubmit() {
     console.log(this.accountForm.value);

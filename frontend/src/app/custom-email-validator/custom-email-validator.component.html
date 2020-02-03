@@ -1,0 +1,18 @@
+<p>Workaround #3: create custom conditional field validator</p>
+<form
+        [formGroup]="accountForm"
+        (ngSubmit)="onSubmit()">
+    <div>
+        Make email mandatory
+        <input type="checkbox" formControlName="accountCheckedEmail" />
+    </div>
+
+    <div>
+        Email: <input formControlName="accountEmail">
+    </div>
+    <button [formAction]="submit">Save</button>
+</form>
+
+<h2>Debug</h2>
+<ul>
+</ul>

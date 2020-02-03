@@ -16,6 +16,7 @@ import { DynamicalAddValidatorComponent } from './dynamical-add-validator/dynami
 import { DisableControlComponent } from './disable-control/disable-control.component';
 import { DynamicalEmailValidatorComponent } from './dynamical-email-validator/dynamical-email-validator.component';
 import { ConditionGroupEmailValidatorComponent } from './condition-group-email-validator/condition-group-email-validator.component';
+import { CustomEmailValidatorComponent } from './custom-email-validator/custom-email-validator.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ConditionGroupEmailValidatorComponent } from './condition-group-email-v
     DynamicalAddValidatorComponent,
     DisableControlComponent,
     DynamicalEmailValidatorComponent,
-    ConditionGroupEmailValidatorComponent
+    ConditionGroupEmailValidatorComponent,
+    CustomEmailValidatorComponent
   ],
   imports: [
     BrowserModule,
