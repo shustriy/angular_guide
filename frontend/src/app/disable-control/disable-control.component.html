@@ -1,9 +1,0 @@
-<h1>Disagble the controls</h1>
-<form [formGroup]="form">
-    <input type="checkbox" formControlName="optionA"> Option A
-    <input type="checkbox" formControlName="optionB"> Option B
-    <input formControlName="optionBExtra" placeholder="Reason" *ngIf="optionB.value">
-</form>
-
-<p>Form Value: {{ form.value | json }}</p>
-<p>Form Valid: {{ form.valid }}</p>
