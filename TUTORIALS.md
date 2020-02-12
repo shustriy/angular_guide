@@ -33,6 +33,21 @@ Understanding RxJS Operators
 Reducing the forms boilerplate — make your Angular forms reusable
 // https://medium.com/angular-in-depth/reducing-the-forms-boilerplate-make-your-angular-forms-reusable-ee06d7c07f47
 
+// Must be filtered!!!
+
+10 Tricks to Optimize Your Angular App
+https://blog.bitsrc.io/10-tricks-to-optimize-your-angular-app-44208f616bf0
+
+https://levelup.gitconnected.com/some-simple-and-amazing-javascript-tricks-292e1962b1f6
+
+https://levelup.gitconnected.com/setting-up-eslint-with-prettier-typescript-and-visual-studio-code-d113bbec9857
+
+https://medium.com/better-programming/delegate-interfaces-with-typescript-1768e7677c6b
+
+https://medium.com/angular-in-depth/how-to-rxjs-in-angular-1037908e82a5
+
+https://itnext.io/the-magic-of-rxjs-sharing-operators-and-their-differences-3a03d699d255
+
 
 // --------------
 Migrate Angular 8 from TSLint to ESLint
