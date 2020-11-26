@@ -52,3 +52,7 @@ https://itnext.io/the-magic-of-rxjs-sharing-operators-and-their-differences-3a03
 // --------------
 Migrate Angular 8 from TSLint to ESLint
 #https://medium.com/create-code/migrate-angular-8-from-tslint-to-eslint-4b0c44c8ae38
+
+// Virtual dom
+https://blog.nrwl.io/understanding-angular-ivy-incremental-dom-and-virtual-dom-243be844bf36
+https://www.freecodecamp.org/news/typescript-curry-ramda-types-f747e99744ab/
