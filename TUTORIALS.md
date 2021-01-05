@@ -56,3 +56,15 @@ Migrate Angular 8 from TSLint to ESLint
 // Virtual dom
 https://blog.nrwl.io/understanding-angular-ivy-incremental-dom-and-virtual-dom-243be844bf36
 https://www.freecodecamp.org/news/typescript-curry-ramda-types-f747e99744ab/
+
+//How to Use ngTemplateOutlet in Angular
+https://www.tektutorialshub.com/angular/ngtemplateoutlet-in-angular/#what-is-ngtemplateoutlet
+
+//How to use ng-template & TemplateRef in Angular
+https://www.tektutorialshub.com/angular/ng-template-in-angular/
+
+//@HostBinding and @HostListener in Angular
+https://www.tektutorialshub.com/angular/hostbinding-and-hostlistener-in-angular/
+
+//Node.js + Angular 11: JWT Authentication & Authorization example
+https://dev.to/bezkoder/node-js-angular-11-jwt-authentication-authorization-example-4add
