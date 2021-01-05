@@ -1,1 +1,33 @@
-<app-tips-tricks-reactive-form></app-tips-tricks-reactive-form>
+<div *ngIf="shown; else elseNgIfBlock">
+  <p>*ngIf when shown=true</p>
+</div>
+<ng-template #elseNgIfBlock>
+  <p>elseNgIfBlock when shown=false</p>
+</ng-template>
+
+<div *myIf="shown; then thenMyIfBlock else elseMyIfBlock">
+  <p>*myIf when shown=true</p>
+</div>
+
+<ng-template #thenMyIfBlock>
+  <p>*thenMyIfBlock when shown=true</p>
+</ng-template>
+<ng-template #elseMyIfBlock>
+  <p>elseMyIfBlock when shown=false</p>
+</ng-template>
+
+
+<div *appIf="!shown; then thenAppIfBlock else elseAppIfBlock">
+  <p>*myIf when shown=true</p>
+</div>
+
+<ng-template #thenAppIfBlock>
+  <p>*thenAppIfBlock when shown=true</p>
+</ng-template>
+<ng-template #elseAppIfBlock>
+  <p>elseAppIfBlock when shown=false</p>
+</ng-template>
+
+<ng-template #showTemplate>
+  <div>Test!</div>
+</ng-template>

@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { TipsTricksReactiveFormComponent } from './tips-tricks-reactive-form/tips-tricks-reactive-form.component';
+import { MyIf } from './my-if.directive';
+import { AppIfDirective } from './app-if.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TipsTricksReactiveFormComponent
+    MyIf,
+    AppIfDirective
   ],
   imports: [
     BrowserModule,
